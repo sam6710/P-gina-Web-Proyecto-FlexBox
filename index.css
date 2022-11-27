@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: #C64B0D;
+}
+p{
+    font-family: 'Nerko One', cursive;
+}
+h1, h2, h3{
+    font-family: 'Bebas Neue', cursive;
+}
+aside{
+    background-color: #420507;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    text-align: center;
+}
+aside img{
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 80%;
+    border-radius: 25%;
+}
+aside p{
+    margin-top: 240%;
+}
+#redes_sociales{
+    margin-top: 80%;
+    margin-left: 10%;
+    width: 80%;
+}
+main{
+    height: 100vh;
+    margin-left: 10%;
+    width: 90%;
+    color: rgb(215, 215, 215);
+}
+nav{
+    background-color: #A62522;
+    height: 9%;
+    padding-left: 52%;
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Rubik Microbe', cursive;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    margin-right: 0.8rem;
+}
+li:hover{
+    font-size: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+h2{
+    position: relative;
+    left: 1rem;
+    text-shadow: 0.438rem 0.313rem 0.313rem black;
+}
+#hero{
+    background-image: url();
+    width: 40%;
+    margin-left: 30%;
+    text-align: center;
+    font-size: 2em;
+}
+#Mi_trabajo{
+    position: relative;
+}
+#Mi_trabajo img{
+    height: 9.4rem;
+    margin-left: 3rem;
+    margin-top: 1.5rem;
+}
+#Sobre_mi{
+    display: flex;
+}
+#Sobre_mi img, div{
+    margin-top: 2rem;
+}
+#Sobre_mi h3{
+    margin-left: 2rem;
+}
+#Sobre_mi p{
+    margin-left: 2rem;
+    margin-top: 1.2rem;
+    width: 60%;
+}
+#servicios{
+    display: flex;
+}
+#servicios img{
+    height: 2.5rem;
+}
+.card_servicio{
+    background-color: #C98025;
+    width: 15%;
+    margin-left: 7rem;
+}
+.card_servicio h3{
+    margin-left: 0.4rem;
+    margin-top: 0.4rem;
+}
+.card_servicio p{
+    margin-left: 0.8rem;
+    margin-top: 1rem;
+    margin-right: 0.8rem;
+}
+.card_servicio img{
+    margin-top: 1rem;
+    margin-left: 15%;
+    width: 70%;
+    height: 3rem;
+}
+#habilidades{
+    display: flex;
+}
+#habilidades_h{
+    display: flex;
+    flex-wrap: wrap;
+}
+.habilidad{
+    background-color: #C98025;
+    width: 12rem;
+    height: 10rem;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 2rem;
+}
+.habilidad img{
+    height: 6rem;
+}
+.barra{
+    position: relative;
+    left: 5%;
+    top: 0.25rem;
+    height: 0.7rem;
+    width: 90%;
+    background-color: gray;
+    border-radius: 1em;
+}
+.progreso{
+    height: 100%;
+    width: var(--w);
+    border-radius: 1rem;
+    background-color: green;
+}
+#barra1{
+    animation: progressbar 2s ease-in-out;
+}
+#barra2{
+    animation: progressbar 2s ease-in-out;
+}
+#barra3{
+    animation: progressbar 2s ease-in-out;
+}
+#barra4{
+    animation: progressbar 2s ease-in-out;
+}
+#barra5{
+    animation: progressbar 2s ease-in-out;
+}
+#barra6{
+    animation: progressbar 2s ease-in-out;
+}
+#barra7{
+    animation: progressbar 2s ease-in-out;
+}
+#barra8{
+    animation: progressbar 2s ease-in-out;
+}
+@keyframes progressbar{
+    0% {width: 0%}
+    100% {width: var(--w)} 
+}
+#testimonios_container{
+    display: flex;
+    width: 60%;
+    margin-left: 14rem;
+}
+.card_testimonio{
+    text-align: center;
+    margin-left: 2rem;
+    width: 25%;
+    background-color: #C98025;
+}
+.card_testimonio img{
+    height: 7rem;
+}
+#contacto{
+    padding-bottom: 3%;
+}
+form{
+    text-align: center;
+    width: 33%;
+    margin-left: 33%;
+    padding: 0.7em;
+    background-color: #C98025;
+}
+@media screen and (max-width:900px){
+    nav{
+        padding-left: 40%;
+    }
+    #Sobre_mi h2{
+        width: 20%;
+    }
+    .card_servicio{
+        margin-left: 4rem;
+        width: 20%;
+    }
+    .card_servicio img{
+        margin-left: 20%;
+        width: 60%;
+    }
+    #testimonios_container{
+        margin-left: 10rem;
+    }
+    .card_testimonio{
+        margin-left: 1.6rem;
+    }
+    .card_testimonio img{
+        height: 6rem;
+    }
+}
+@media screen and (max-width:610px){
+    nav{
+        width: 120%;
+        padding-left: 10%;
+    }
+    #imagenes_trabajos{
+        text-align: center;
+    }
+    .hero{
+        font-size: 0.5rem;
+    }
+    #Sobre_mi h2{
+        width: 50%;
+    }
+    .card_servicio{
+        margin-left: 2.5rem;
+        width: 30%;
+    }
+    #testimonios_container{
+        width: 92%;
+        margin-left: 5rem;
+    }
+    form{
+        margin-left: 40%;
+    }
+}
