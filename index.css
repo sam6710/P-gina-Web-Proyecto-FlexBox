@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --clippy: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
 body{
     display: flex;
     background-color: #C64B0D;
@@ -17,6 +20,7 @@ p{
 h1, h2, h3{
     font-family: 'Bebas Neue', cursive;
 }
+/* Aside */
 aside{
     background-color: #420507;
     height: 100%;
@@ -26,6 +30,7 @@ aside{
     flex-wrap: wrap;
     position: fixed;
     text-align: center;
+    color: gray;
 }
 aside img{
     margin-top: 20%;
@@ -41,6 +46,7 @@ aside p{
     margin-left: 10%;
     width: 80%;
 }
+/* Main */
 main{
     height: 100vh;
     margin-left: 10%;
@@ -74,6 +80,7 @@ h2{
     left: 1rem;
     text-shadow: 0.438rem 0.313rem 0.313rem black;
 }
+/* Hero */
 #hero{
     background-image: url();
     width: 40%;
@@ -81,6 +88,27 @@ h2{
     text-align: center;
     font-size: 2em;
 }
+#GitHub{
+    position: relative;
+    padding-left: 1rem;
+}
+#GitHub::before{
+    content: '';
+    display: block;
+    background-color: #c97777;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: var(--clippy);
+    transition: clip-path 2s;
+}
+#GitHub:hover::before{
+    clip-path:  polygon(0 0, 85% 0, 99% 100%, 0 100%);
+}
+/* Mi trabajo */
 #Mi_trabajo{
     position: relative;
 }
@@ -89,6 +117,7 @@ h2{
     margin-left: 3rem;
     margin-top: 1.5rem;
 }
+/* Sobre mi */
 #Sobre_mi{
     display: flex;
 }
@@ -103,6 +132,7 @@ h2{
     margin-top: 1.2rem;
     width: 60%;
 }
+/* Servicios */
 #servicios{
     display: flex;
 }
@@ -129,6 +159,7 @@ h2{
     width: 70%;
     height: 3rem;
 }
+/* Habilidades */
 #habilidades{
     display: flex;
 }
@@ -153,14 +184,14 @@ h2{
     top: 0.25rem;
     height: 0.7rem;
     width: 90%;
-    background-color: gray;
+    background-color: green;
     border-radius: 1em;
 }
 .progreso{
     height: 100%;
     width: var(--w);
     border-radius: 1rem;
-    background-color: green;
+    background-color: lime;
 }
 #barra1{
     animation: progressbar 2s ease-in-out;
@@ -186,10 +217,12 @@ h2{
 #barra8{
     animation: progressbar 2s ease-in-out;
 }
+/* Animación barras progreso */
 @keyframes progressbar{
     0% {width: 0%}
     100% {width: var(--w)} 
 }
+/* Testimonios */
 #testimonios_container{
     display: flex;
     width: 60%;
@@ -204,6 +237,7 @@ h2{
 .card_testimonio img{
     height: 7rem;
 }
+/* Contacto */
 #contacto{
     padding-bottom: 3%;
 }
@@ -213,7 +247,21 @@ form{
     margin-left: 33%;
     padding: 0.7em;
     background-color: #C98025;
+    font-family: 'Nerko One', cursive;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
 }
+input[type=submit]{
+    background-color: #A62522;
+    color: white;
+    border-color: #ff8c00;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Media Query */
+/* 900px de ancho o menos */
 @media screen and (max-width:900px){
     nav{
         padding-left: 40%;
@@ -239,6 +287,7 @@ form{
         height: 6rem;
     }
 }
+/* 610px de ancho o menos */
 @media screen and (max-width:610px){
     nav{
         width: 120%;
